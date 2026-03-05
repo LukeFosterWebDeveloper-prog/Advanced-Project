@@ -58,8 +58,59 @@
             <div class="scroll__icon click"></div>
         </a>
         <div class="modal">
-            <div class="modal__half modal__about">Here is a little bit about me</div>
-            <div class="modal__half modal__contact">let's have a chat</div>
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">A little more about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Web Developer</h4>
+                <p class="modal__para">
+                    I'm a <b class="aqua">developer</b> living in Aurora Colorado with a passion for creating modular, adaptive, scalable and engaging interfaces.
+                    <br>
+                    I bring a vast knowledge base from a variety of industries and continually evolve to increase my understanding.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="HTML_LOGO" class="language__img">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS_LOGO" class="language__img">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JAVA_LOGO" class="language__img">
+                        <span class="language__name">Java</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="REACT_LOGO" class="language__img">
+                        <span class="language__name">React</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title modal__title--contact">Let's get to know eachother!</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities and would love to hear from you.</h4>
+                <form id="contact__form" action="">
+                    <div class="form__item">
+                        <label class="form__item--label">Name:</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email:</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message:</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Connect</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thank you for the message! I look forward to connecting with you shortly.
+                </div>
+            </div>
+            <i class="fas fa-times modal__exit click"></i>
         </div>
     </section>
     <section id="projects">
