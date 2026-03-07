@@ -6,6 +6,17 @@
     <title>Advanced Project</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e030ad1e61.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "kdBjSdKTL9fvwXdhZ",
+          });
+       })();
+    </script>
 </head>
 <body>
     <section id="landing-page">
@@ -20,7 +31,7 @@
                 <li class="nav_link">
                     <a href="" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
                 </li>
-                <li class="nav_link">
+                <li class="nav_link" onclick="toggleModal()">
                     <a href="" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
                 </li>
                 <li class="nav_link click">
@@ -36,7 +47,7 @@
                 <p class="header__para">
                     I'm a <b class="aqua">frontend Software Engineer</b> with a passion for creating beautiful and functional websites. I have experience in HTML, CSS, JavaScript, and React. I'm always looking for new challenges and opportunities to learn and grow as a developer.
                     <br>
-                    Here's a little more <b class="aqua">about me</b>.
+                    Here's a little more  <b class="aqua click" onclick="toggleModal()">about me</b>.
                 </p>
                 <div class="social__list">
                     <a href="" target="_blank" class="social__link click">
@@ -51,7 +62,7 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fa-solid fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -86,9 +97,10 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">Let's get to know eachother!</h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities and would love to hear from you.</h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name:</label>
                         <input class="input" name="user_name" type="text" required></input>
@@ -110,7 +122,6 @@
                     Thank you for the message! I look forward to connecting with you shortly.
                 </div>
             </div>
-            <i class="fas fa-times modal__exit click"></i>
         </div>
     </section>
     <section id="projects">
