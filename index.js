@@ -1,6 +1,19 @@
 // template_u1g0j7w
 //service_mnecg0v
 //kdBjSdKTL9fvwXdhZ
+let isModalOpen = false
+let contrastToggle = false
+
+function toggleContrast() {
+    event.preventDefault();
+    contrastToggle = !contrastToggle
+    if (contrastToggle) {
+    document.body.classList += " dark-theme"
+    }
+    else {
+        document.body.classList.remove("dark-theme")
+    }
+}
 
 function contact(event) {
     event.preventDefault();
@@ -28,7 +41,7 @@ function contact(event) {
 }
 
 // TOGGLE MODAL
-let isModalOpen = false
+
 function toggleModal() {
     if (isModalOpen) {
         isModalOpen = false
